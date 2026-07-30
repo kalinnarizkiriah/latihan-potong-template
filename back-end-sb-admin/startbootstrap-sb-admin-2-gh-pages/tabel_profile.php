@@ -1,10 +1,10 @@
 <?php 
 include "connection.php";
-// kedua, buat perintah sql/query ke database utk menampilkan data
-$select_profile = mysqli_query($koneksi,"SELECT * FROM `tb_profile`");
-// ketiga
+// Buat perintah sql/query ke database utk menampilkan data
+$select_profile = mysqli_query($koneksi, "SELECT * FROM `tb_profile` ORDER BY `id_profile` DESC");
 ?>
 <?php include "header.php" ?>
+
 <body id="page-top">
 
     <!-- Page Wrapper -->
@@ -29,14 +29,9 @@ $select_profile = mysqli_query($koneksi,"SELECT * FROM `tb_profile`");
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Profile</h1>
-                      <!--  <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
+                        <h1 class="h3 mb-0 text-gray-800">PROFILE</h1>
                     </div>
 
-                    <!-- keempat, tambahkan tombol TAMBAH utk mengarahkan ke file form_profile.php -->
-                     <a href="form_profile.php" class ="btn btn-info mb-2">Add</a>
-                    <!-- content start -->
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -49,45 +44,48 @@ $select_profile = mysqli_query($koneksi,"SELECT * FROM `tb_profile`");
                                 <th scope="col">Linkedin</th>
                                 <th scope="col">Nationality</th>
                                 <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- perulangan -->
+                            <?php while ($tampil = mysqli_fetch_object($select_profile)): ?>
                                 <tr>
-</thead>
-                                        <tbody>
-                                            <!-- perulangan -->
-                                             <?php
+                                    <th scope="row"><?php echo $tampil->nama; ?></th>
+                                    <td><?php echo $tampil->about; ?></td>
+                                    
+                                    <!-- Website: Menampilkan URL langsung berwarna biru & clickable -->
+                                    <td>
+                                        <?php if (!empty($tampil->website)): ?>
+                                            <a href="<?php echo $tampil->website; ?>" target="_blank" class="text-primary font-weight-bold">
+                                                <u><?php echo $tampil->website; ?></u>
+                                            </a>
+                                        <?php endif; ?>
+                                    </td>
 
-                                             while (
-                                                $tampil = mysqli_fetch_object
-                                                ($select_profile)
-                                                ):
-                                                ?>
-                                                <tr>
-                                                    <th scope="row"><?php echo $tampil->nama; ?></th>
-                                                    <td><?php echo $tampil->about; ?></td>
-                                                    <td><?php echo $tampil->website; ?></td>
-                                                    <td><?php echo $tampil->phone; ?></td>
-                                                    <td><?php echo $tampil->email; ?></td>
-                                                    <td><?php echo $tampil->addres; ?></td>
-                                                    <td><?php echo $tampil->linkedin; ?></td>
-                                                    <td><?php echo $tampil->nationality; ?></td>
-                                                    <td>
-                                                        <!-- step two -->
-                                                        <!-- DELETE_PROFILE.php? membutuhkan id_profile yg didapatkan dari $tampil-> id_profile diatas -->
-                                                        <!-- step three: -->
-                                                        <!-- on click "return confirm ('Confirm to delete?')" adalah utk konfirmasi hapus ketika click tombol DELETE -->
-                                                        <!-- step four: create delete_profile.php -->
-                                                        <a href="delete_profile.php? id_profile=<?php echo $tampil->id_profile; ?>"
-                                                        class="btn btn-danger" onclick="return confirm ('confirm to delete?')">DELETE</a>
-                                                        <!-- dari sini kita kemudian bikin filr update_form_profile.php -->
-                                                        <!-- di file tsb, kita copy data file form_profile dan paste di file "update_form_profile.php -->
-                                                        <!-- dari sini skrg kita ke file update_form_profile.php -->
-                                                        <a href="update_form_profile.php?id_profile=<?php echo $tampil->id_profile; ?>" class="btn btn-success">UPDATE</a>
-</td>
-</tr>
-<?php endwhile; ?>
-</tbody>
-</table>
+                                    <td><?php echo $tampil->phone; ?></td>
+                                    <td><?php echo $tampil->email; ?></td>
+                                    <td><?php echo $tampil->addres; ?></td>
+
+                                    <!-- LinkedIn: Menampilkan URL langsung berwarna biru & clickable -->
+                                    <td>
+                                        <?php if (!empty($tampil->linkedin)): ?>
+                                            <a href="<?php echo $tampil->linkedin; ?>" target="_blank" class="text-primary font-weight-bold">
+                                                <u><?php echo $tampil->linkedin; ?></u>
+                                            </a>
+                                        <?php endif; ?>
+                                    </td>
+
+                                    <td><?php echo $tampil->nationality; ?></td>
+                                    <td>
+                                        <a href="update_form_profile.php?id_profile=<?php echo $tampil->id_profile; ?>" class="btn btn-success">UPDATE</a>
+                                    </td>
+                                </tr>
+                            <?php endwhile; ?>
+                        </tbody>
+                    </table>
                     <!-- content end -->
-</div>
+
+                </div>
                 <!-- /.container-fluid -->
 
             </div>

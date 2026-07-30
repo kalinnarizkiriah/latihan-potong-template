@@ -33,7 +33,7 @@ $select_education = mysqli_query($koneksi, "SELECT*FROM education ORDER BY id_ed
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Education</h1>
+                        <h1 class="h3 mb-0 text-gray-800">EDUCATION</h1>
                       <!--  <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
                     </div>

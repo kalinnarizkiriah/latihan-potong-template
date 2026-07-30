@@ -1,6 +1,6 @@
 <?php 
 include "connection.php";
-$select_familiar = mysqli_query($koneksi, "SELECT * FROM familiar");
+$select_familiar = mysqli_query($koneksi, "SELECT * FROM familiar ORDER BY id_familiar DESC");
 ?>
 <?php include "header.php" ?>
 
@@ -28,12 +28,13 @@ $select_familiar = mysqli_query($koneksi, "SELECT * FROM familiar");
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Familiar</h1>
+                        <h1 class="h3 mb-0 text-gray-800">FAMILIAR</h1>
                       <!--  <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
                     </div>
 
                     <!-- content start -->
+                     <a href="form_familiar.php" class="btn btn-info mb-2">Add</a>
                     <table class="table table-striped">
                         <thead>
                             <tr>

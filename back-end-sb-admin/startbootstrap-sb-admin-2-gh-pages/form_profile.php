@@ -1,7 +1,3 @@
-<!-- Ini adalah Langkah pertama setelah memotong template index.php yaitu membuat form_profile.php -->
-<!-- di tengah2 halaman ini selanjutnya dibuat action_insert_profile.php dari action="action_insert_profile.php" method="post" -->
-<!-- next kita ke file action_insert_profile.php -->
-<!-- LANJUTKAN utk membuat file berikutnya yaitu form_job.php, form_language.php, form_portofolio.php, form_skill.php, form_education.php, form_reference.php dengan cara berulang yg sama -->
 <?php include "header.php" ?>
 
 <body id="page-top">
@@ -55,7 +51,7 @@
                             <label for="email" class="form-label">Email Address</label>
                                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else </div>
-</div>
+                            </div>
                          <div class="mb-3">
                             <label for="addres" class="form-label">Address</label>
                                <textarea name="addres" id="addres" cols="20" class="form-control" rows="5"></textarea> 
@@ -69,7 +65,8 @@
                                <input type="text" class="form-control" id="nationality" name="nationality">
                         </div>
                         <button type="submit" name="submit" class="btn btn-primary">Submit</button>
-</form>
+                        <button type="reset" name="reset" class="btn btn-primary">Reset</button>
+                    </form>
 
                     <!-- content end -->
 

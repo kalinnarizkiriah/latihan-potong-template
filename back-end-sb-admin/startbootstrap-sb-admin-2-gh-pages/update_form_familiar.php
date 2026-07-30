@@ -31,7 +31,7 @@ $m = mysqli_fetch_object($query);
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Familiar</h1>
+                        <h1 class="h3 mb-0 text-gray-800">UPDATE FAMILIAR</h1>
                       <!--  <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
                     </div>
@@ -47,7 +47,8 @@ $m = mysqli_fetch_object($query);
                             <input type="text" class="form-control" id="nama" name="icon" value="<?php echo $m->icon?>">
                     </div>
                     <input type="hidden" value="<?php echo $m->id_familiar?>" name="id_familiar">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Update</button>
+                    <button type="reset" name="reset" class="btn btn-primary">Reset</button>
                     </form>
                     <!-- content end -->
 

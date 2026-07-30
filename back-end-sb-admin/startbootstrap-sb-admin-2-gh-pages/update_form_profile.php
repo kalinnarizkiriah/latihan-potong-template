@@ -1,30 +1,45 @@
-<!-- we are dr file tabel_profile -->
-<!-- next: copy the data from form_profile -->
-<?php 
+<?php
 include "connection.php";
 
-// menyimpan sementara id_profile dari tombol UPDATE tabel_profile.php sebelum dieksekusi ke bawah berikut ini
-// $_GET['id_profile']; yg menerima id_profile dr tombol UPDATE tabel_profile.php
 $id_profile = $_GET['id_profile'];
 
-// menampilkan data profile yang didapat atau dikirim dari tombol UPDATE tabel_profile.php di atas
 $select_id = mysqli_query($koneksi, "SELECT * FROM tb_profile WHERE id_profile='$id_profile'");
 
-// fungsi untuk menampilkan isi tabel menggunakan mysqli_fetch_object (->)
-// selanjutnya menuju form bawah dengan menggunakan value untuk inputan setiap data
 $profile = mysqli_fetch_object($select_id);
 
-// di bawah ini adalah isi asli dari form.profile
 ?>
-
 <?php include "header.php" ?>
 
 <body id="page-top">
+
+    <!-- Page Wrapper -->
     <div id="wrapper">
+
+        <!-- Sidebar -->
+        <?php include "sidebar.php" ?>
+        <!-- End of Sidebar -->
+        
+        <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
             <div id="content">
+
+                <!-- Topbar -->
+                <?php include "topbar.php" ?>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
                 <div class="container-fluid">
 
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">UPDATE PROFILE</h1>
+                      <!--  <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
+                    </div>
+
+                    <!-- content start -->
                     <form action="action_update_profile.php" method="post">
                         <div class="mb-3">
                             <label for="nama" class="form-label">Name</label>
@@ -71,13 +86,31 @@ $profile = mysqli_fetch_object($select_id);
 
                         <!-- step 2: update form profile maksudnya adalah menambahkan inputan id_profile dengan tipe HIDDEN untuk mengirimkan id_profile mana yang mau di update -->
                         <!-- di bawah ini adalah caranya -->
+                         
                         <input type="hidden" value="<?php echo $profile->id_profile?>" name="id_profile">
 
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
+                        <button type="submit" class="btn btn-primary">Update</button>
+                        <button type="reset" name="reset" class="btn btn-primary">Reset</button>
+</form>
+                    <!-- content end -->
 
-                </div>
+                <!-- /.container-fluid -->
+
             </div>
+            <!-- /.container-fluid -->
+            
         </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <?php include "footer.php" ?>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
     </div>
-</body>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <?php include "bottom.php" ?>

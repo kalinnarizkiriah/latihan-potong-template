@@ -1,0 +1,8 @@
+<?php
+include "connection.php";
+$vnama=$_POST['nama'];
+$vicon=$_POST['icon'];
+
+$sql_mobile = mysqli_query($koneksi, "INSERT INTO mobile(nama, icon) values ('$vnama', '$vicon')");
+
+header("Location:tabel_mobile.php");
