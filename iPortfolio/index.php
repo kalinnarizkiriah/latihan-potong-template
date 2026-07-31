@@ -7,6 +7,7 @@
   <title>Curriculum Vitae of Kalinna</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+  
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -20,7 +21,7 @@
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
@@ -35,656 +36,659 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 
-  <!-- link icon yg di dapat dari devicon.dev -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-  <!-- tooltip start -->
- <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+  <!-- link icon yg didapat dari devicon.dev --> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@2.15.1/devicon.min.css">
 
-  <style>
-    #hero:before {
-      content:"";
-      position: absolute;
-      bottom: 0;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1;
+  <!-- tooltip start -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" 
+    integrity="sha512-TPh2Oxlg1zp+kz3nFA0C5vVC6leG/6mm1z9+mA81MI5eaUVqasPLO8Cuk4gMF4gUfP5etR73rgU/8PNMsSesoQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+      #hero:before {
+        content:"";
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+    </style>
+    <style>
+    /* Paksa Munculkan Garis Biru pada Judul Section */
+    .section-title h2 {
+      font-size: 32px !important;
+      font-weight: bold !important;
+      margin-bottom: 20px !important;
+      padding-bottom: 20px !important;
+      position: relative !important;
+      color: #173b6c !important;
+    }
+
+    /* Membuat Garis Biru Horizontal */
+    .section-title h2::after {
+      content: "" !important;
+      position: absolute !important;
+      display: block !important;
+      width: 50px !important;
+      height: 3px !important;
+      background: #149ddd !important; /* Warna biru template */
+      bottom: 0 !important;
+      left: 0 !important;
+    }
+
+    /* Membuat Garis Biru Vertikal pada Timeline Resume (Education/Training) */
+    .resume .resume-item {
+      padding: 0 0 20px 20px !important;
+      margin-top: -2px !important;
+      border-left: 2px solid #149ddd !important; /* Garis biru di sebelah kiri */
+      position: relative !important;
+    }
+
+    /* Membuat Titik Lingkaran Biru pada Resume */
+    .resume .resume-item::before {
+      content: "" !important;
+      position: absolute !important;
+      width: 16px !important;
+      height: 16px !important;
+      border-radius: 50% !important;
+      left: -9px !important;
+      top: 0 !important;
+      background: #fff !important;
+      border: 2px solid #149ddd !important; /* Lingkaran biru */
     }
   </style>
 </head>
+</head>
 
 <body>
-  <!-- LETAK PEMANGGILAN DATA DI BACKEND MENGGUNAKAN PHP start here -->
-   <?php
-   include "../back-end-sb-admin/startbootstrap-sb-admin-2-gh-pages/connection.php";
-   // FROM "profile" di bwh ini adalah nama tabel di dlm database
-   $tampil_profile = mysqli_query($koneksi, "SELECT * FROM tb_profile");
-   $p = mysqli_fetch_object($tampil_profile);
+  <!-- LETAK PEMANGGILAN DATA DI BACKEND MNGGUNKAN PHP start here -->
+  <?php
+  include "../back-end-sb-admin/startbootstrap-sb-admin-2-gh-pages/connection.php";
+  // FROM "profile" dibwh ini adlh nama tabel di dlm database
+  $tampil_profile = mysqli_query($koneksi, "SELECT* FROM tb_profile");
+  $p = mysqli_fetch_object($tampil_profile);
 
-   ?>
+  ?>
 
-   <!-- ======= Mobile nav toggle button ======= -->
-    <i class="header-toggle bi bi-list d-xl-none"></i>
+  <!-- Mobile nav toggle button -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
-   <!-- ======= Header ======= -->
+  <!-- Header -->
+
   <header id="header">
-    <div class="d-flex flex-column">
-    <div class="profile">
+    <div class="d-flex flex-columns">
 
-    <!-- menampilkan data foto sidebar start -->
-     <?php 
-     include "../back-end-sb-admin/startbootstrap-sb-admin-2-gh-pages/connection.php";
-     // FROM "profile" di bwh ini adalah nama tabel di dlm database
-     $tampil_sidebar_photo = mysqli_query($koneksi, "SELECT * FROM sidebar_photo");
-     $sb =mysqli_fetch_object($tampil_sidebar_photo);
+      <div class="profile">
 
-     ?>
-     <!-- end -->
-     
-      <img src="../back-end-sb-admin/foto/<?php echo $sb->sidebar_photo ?>" alt="" class="img-fluid rounded-circle">
-     <!-- <h1 class="sitename">Alex Smith</h1></a> -->
-      <h1 class="text-light"><a href="index.php"><?php echo $p->nama ?> </a></h1>
+        <!-- menampilkan data foto sidebar start -->
+        <?php
+        include "../back-end-sb-admin/startbootstrap-sb-admin-2-gh-pages/connection.php";
+        // FROM "profile" di bwh ini adlh nama tabel di dlm database
+        $tampil_sidebar_photo = mysqli_query($koneksi, "SELECT* FROM
+       sidebar_photo");
+        $sb = mysqli_fetch_object($tampil_sidebar_photo);
 
-    <div class="social-links mt-3 text-center">
-      <!-- <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="google-plus"><i class="bi bi-skype"></i></a> -->
-      <a href="<?php echo $p->linkedin ?>" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+        ?>
+        <!-- end -->
+
+        <img src="../back-end-sb-admin/startbootstrap-sb-admin-2-gh-pages/foto/<?php echo $sb->sidebar_photo ?>" alt="" class="img-fluid rounded-circle">
+      </div>
+
+      <h1 class="text-light"><a href="index.php"><?php echo $p->nama ?></a></h1>
+
+      <div class="social-links text-center">
+        <!-- <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bi bi-skype"></i></a> -->
+        <a href="<?php echo $p->linkedin ?>" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i><span> Overview </span></a></li>
+          <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Proficiency</span></a></li>
+          <li><a href="#education" class="nav-link scrollto"><i class="bx bx-file-blank"></i><span> Education</span></a>
+          </li>
+          <li><a href="#experience" class="nav-link scrollto"><i class="bx bx-file-blank"></i>
+              <span>Experience</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
+              <span>Portfolio</span></a></li>
+          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Referees</span></a></li>
+          <!-- <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li> -->
+        </ul>
+      </nav> <!-- .nav-menu -->
     </div>
+  </header> <!-- .End Header -->
 
-    <nav id="navbar" class="nav-menu navbar">
-      <ul>
-        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i><span>Home<span></a></li>
-        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i><span>Overview</span></a></li>
-        <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-user"></i><span>Proficiency</span></a></li>
-        <li><a href="#education" class="nav-link scrollto"><i class="bx bx-file-blank"></i><span>Education</span></a></li>
-        <li><a href="#experience" class="nav-link scrollto"><i class="bx bx-file-blank"></i><span>Experience</span></a></li>
-        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i><span>Portfolio</span></a></li>
-        <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i><span>Referees</span></a></li>
-</ul>
-</nav> <!-- .nav-menu -->
-</div>
-</header> <!-- End Header -->
+  <!-- Hero Section -->
+    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+      <div class="hero-container" data-aos="fade-in">
+        <h2>Kalinna Rizki Riah</h2>
+        <p>Saya<span class="typed" data-typed-items="bekerja keras, ramah, mudah bergaul, kreatif "></span></p>
+      </div>
+    </section><!-- / end Hero Section -->
 
-<!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-  <div class="hero-container" data-aos="fade-in">
-    <h1>Kalinna</h1>
-    <p>Saya<span class="typed" data-typed-items="Pekerja Keras, Gampang Berbaur, Ramah"></span></p>
-</div>
-</section> <!-- End Hero -->
-<main id="main">
+      <main id="main">
 
-<!-- ======= About Section ======= -->
- <section id="about" class="about">
-  <div class="container">
 
-  <div class="section-title">
-    <h2>OVERVIEW</h2>
-    <p style="text-align: justify;"><?php echo $p->about ?> </p> <br>
-</div>
+  <!-- About Section -->
+  <section id="about" class="about section">
+    <div class="container">
 
-<div class="row">
-    <div class="col-lg-4" data-aos="fade-right">
-        <img src="../back-end-sb-admin/startbootstrap-sb-admin-2-gh-pages/foto/<?php echo $sb->sidebar_photo ?>" class="img-fluid" alt="" width="350">
-    </div>
-<div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-<div class="section-title">
-  
-<h2>INFORMASI PRIBADI</h2>
-</div>
-<!-- <p class="fst-italic">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut labore et
-  dolore
-  magna aliqua.
-</p> -->
-<br>
-<div class="row">
-  <div class="col-lg">
-    <ul>
-      <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong><span><?php echo $p->website ?></span></li>
-      <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong><span><?php echo $p->phone ?></span></li>
-      <li><i class="bi bi-chevron-right"></i> <strong>Address:</strong><span><?php echo $p->address ?></span></li>
-      <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong><span><?php echo $p->email ?></span></li>
-      <li><i class="bi bi-chevron-right"></i> <strong>Nationality:</strong><span><?php echo $p->nationality ?></span></li>
-</ul>
-</div>
-              <div class="col-lg-6">
-                <ul>
-                <!-- <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>email@example.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                </ul>
-              </div> -->
-            </div>
-            <!-- <p class="py-3">
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque.
-            </p> -->
-          </div>
+
+      <!-- Section Title -->
+      <div class="section-title">
+        <h2>OVERVIEW</h2>
+        <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+          consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+          in iste officiis commodi quidem hic quas.</p> -->
+        <p style="text-align: justify;"><?php echo $p->about ?></p><br>
+      </div>
+    </div><!-- End Section Title -->
+
+
+    <div class="row">
+      <div class="col-lg-4" data-aos="fade-right">
+     <img src="../back-end-sb-admin/startbootstrap-sb-admin-2-gh-pages/fotobende/<?php echo $sb->sidebar_photo ?>" class="img-fluid" alt="" width="350"> 
+      </div>
+
+      <div class="col-lg-8 pt-4 pt-lg-0 content data-aos=fade-left">
+        <div class="section-title">
+
+
+          <h2>Informasi Pribadi</h2>
         </div>
 
+        <br>
+        <div class="row">
+        </div>
+        <div class="col-lg">
+        </div>
+        <!-- Bagian Informasi Pribadi -->
+<ul style="list-style: none; padding-left: 0;">
+  <li class="mb-2">
+    <i class="bi bi-chevron-right" style="color: #198754; font-weight: bold;"></i> 
+    <strong>Website:</strong> <a href="https://www.instagram.com/p/DYKTgJXEfjs/?igsh=MTdhNHI5aW1NWvXdQ==" target="_blank">https://www.instagram.com/...</a>
+  </li>
+  <li class="mb-2">
+    <i class="bi bi-chevron-right" style="color: #198754; font-weight: bold;"></i> 
+    <strong>Phone:</strong> 085871472153
+  </li>
+  <li class="mb-2">
+    <i class="bi bi-chevron-right" style="color: #198754; font-weight: bold;"></i> 
+    <strong>Address:</strong> Yogyakarta
+  </li>
+  <li class="mb-2">
+    <i class="bi bi-chevron-right" style="color: #198754; font-weight: bold;"></i> 
+    <strong>Email:</strong> kalinna.rizki24@smk.belajar.id
+  </li>
+  <li class="mb-2">
+    <i class="bi bi-chevron-right" style="color: #198754; font-weight: bold;"></i> 
+    <strong>Nationality:</strong> Indonesia
+  </li>
+</ul>
       </div>
+      <!-- <div class="col-lg-6">
+        <ul>
+          <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
+          <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
+          <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>email@example.com</span></li>
+          <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+        </ul>
+      </div> -->
+    </div>
+    <!--<p class="py-3">
+      Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et
+      ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
+      Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque.
+    </p> -->
+    </div>
+    </div>
 
-    </section><!-- End About Section -->
+    </div>
 
-    <!-- Facts Section -->
-    <section id="facts" class="facts">
-      <div class="container">
+  </section><!-- End About Section -->
 
-      <!--  <div class="row gy-4">
+  <!-- Stats Section -->
+  <section id="facts" class="facts">
+    <div class="container">
 
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Happy Clients</strong> <span>consequuntur quae</span></p>
-            </div>
-          </div><
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Projects</strong> <span>adipisci atque cum quia aut</span></p>
-            </div>
-</div>
+      <!--<div class="row gy-4">
 
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hours Of Support</strong> <span>aut commodi quaerat</span></p>
-            </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="stats-item">
+            <i class="bi bi-emoji-smile"></i>
+            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p><strong>Happy Clients</strong> <span>consequuntur quae</span></p>
           </div>
+        </div><-- End Stats Item -->
 
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Hard Workers</strong> <span>rerum asperiores dolor</span></p>
-            </div>
-</div>
+      <!-- <div class="col-lg-3 col-md-6">
+          <div class="stats-item">
+            <i class="bi bi-journal-richtext"></i>
+            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p><strong>Projects</strong> <span>adipisci atque cum quia aut</span></p>
+          </div>
+        </div><-- End Stats Item -->
 
-        </div> -->
+      <!-- <div class="col-lg-3 col-md-6">
+          <div class="stats-item">
+            <i class="bi bi-headset"></i>
+            <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p><strong>Hours Of Support</strong> <span>aut commodi quaerat</span></p>
+          </div>
+        </div><-- End Stats Item -->
 
+      <!-- <div class="col-lg-3 col-md-6">
+          <div class="stats-item">
+            <i class="bi bi-people"></i>
+            <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p><strong>Hard Workers</strong> <span>rerum asperiores dolor</span></p>
+          </div>
+        </div><-- End Stats Item 
+
+      </div> -->
+
+    </div>
+
+  </section><!-- /Stats Section -->
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills section-bg">
+
+    <!-- Section Title -->
+    <div class="row text-start justify-content-start">
+  <div class="col-12 text-start">
+
+    <!-- Judul Utama -->
+    <h2 >Keterampilan IT</h2>
+
+    <!-- BAGIAN 1: PROGRAMMING LANGUAGES & FRAMEWORK -->
+    <div class="mb-4 text-start">
+      <h6 style="color:gray" class="text-start">PROGRAMMING LANGUAGES & FRAMEWORK</h6>
+      <div class="d-flex flex-wrap align-items-center text-start">
+        <?php 
+        include "../back-end-sb-admin/startbootstrap-sb-admin-2-gh-pages/connection.php";
+        $tampil_mobile = mysqli_query($koneksi, "SELECT * FROM mobile");
+        while ($m = mysqli_fetch_object($tampil_mobile)):
+        ?>
+          <i style="font-size:35px" 
+             class="icon-width-tooltip <?php echo $m->icon; ?> colored m-3 ms-0"
+             data-bs-toggle="tooltip" 
+             data-bs-placement="top" 
+             title="<?php echo $m->nama ?>">
+          </i>
+        <?php endwhile; ?>
       </div>
+    </div>
 
-    </section><!-- End Facts Section -->
+    <!-- BAGIAN 2: FAMILIAR WITH -->
+    
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills section-bg">
-     
-      <div class="container">
-      <div class="section-title mb-4" style="color:grey;">
-        <h2 id="">Keterampilan IT</h2>
-        <h6 style="color:gray">PROGRAMMING LANGUAGES & FRAMEWORK </h6>
-        <p>
-          <h4 class="title"></h4>
-          <p class="description"> <?php include "../back-end-sb-admin/startbootstrap-sb-admin-2-gh-pages/connection.php";
-          // profile adalah nama tabel di database
-          $tampil_mobile = mysqli_query($koneksi, "SELECT * FROM mobile");
-          while ($m = mysqli_fetch_object($tampil_mobile)) :
-            ?>
-        <i style="font-size:35px" class="icon-with-tooltip <?php echo $m->icon; ?> data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $m->nama ?>"></i>
-        <script>
-          document.addEventListener('DOMContentLoaded', function( {
-            var tooltips = new bootstrap.Tooltip(document.querySelector('<?php echo $m->icon ?>'));
-          }))
+    <div class="section-title mb-4">
+      <h6 style="color:gray"> FAMILIAR WITH</h6>
+      <p>
+      <h4 class="title"> </h4>
+      <p class="description"> <?php include "../back-end-sb-admin/startbootstrap-sb-admin-2-gh-pages/connection.php";
+      // profile adlh nama tabel di database
+      $tampil_familiar = mysqli_query($koneksi, "SELECT*FROM familiar");
+      while ($m = mysqli_fetch_object($tampil_familiar)):
+        ?>
+          <!-- <i style="color: grey;font-size:35px" class="<?php echo $m->icon; ?> m-3"></i> -->
+          <i style="font-size:35px" class="icon-width-tooltip <?php echo $m->icon; ?> colored m-3"
+            data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $m->nama ?>"></i>
+
+
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              var tooltips = new bootstrap.Tooltip(document.querySelector('.<?php echo $m->icon ?>'));
+            })
           </script>
-          <?php endwhile; ?>
-          </p>
-          </p>
-          </div>
-          <div class="section-title mb-4">
-          <h6 style="color:gray">FAMILIAR WITH</h6>
-          <p>
-          <h4 class="title"></h4>
-          <p class="description"> <?php include "../back-end-sb-admin/startbootstrap-sb-admin-2-gh-pages/connection.php";
-          // profile ini adalah nama tabel di database
-          $tampil_familiar = mysqli_query($koneksi, "SELECT * FROM familiar");
-          while ($m = mysqli_fetch_object($tampil_familiar)) :
-            ?>
-            <i style="font-size:35px" class="icon-with-tooltip <?php echo $m->icon; ?>
-            data-bs-toggle="tooltip"
-            data-bs-placement="top" title="<?php echo $m->nama ?>""</i>
+        <?php endwhile; ?>
+      </p>
+      </p>
+      <div class="section-title mb-4" style="color: grey;">
+        <h6> TOOLS & PLATFROM
+        </h6>
+        <p>
+        <h4 class="title"> </h4>
+        <p class="description"> <?php include "../back-end-sb-admin/startbootstrap-sb-admin-2-gh-pages/connection.php";
+        //
+        $tampil_tools = mysqli_query($koneksi, "SELECT*FROM tools");
+        while ($m = mysqli_fetch_object($tampil_tools)):
+          ?>
+            <!-- <i style="color: grey;font-size:35px" class="<?php echo $m->icon; ?> m-3"></i> -->
+            <i style="font-size:35px" class="icon-width-tooltip <?php echo $m->icon; ?> colored m-3"
+              data-bs-toggle="tooltip" data-bs-placement="top" title="<?php echo $m->nama ?>"></i>
             <script>
-            <?php endwhile; ?>
-            </p>
-            </p>
-            </div>
-            <div class="section-title mb-4" style="color:grey">
-            <h6>TOOLS & PLATFORMS</h6>
-            <p>
-            <h4 class="title"></h4>
-            <p class="description"> <?php include "../back-end-sb-admin/startbootstrap-sb-admin-2-gh-pages/connection.php";
-            $tampil_tools =  mysqli_query($koneksi, "SELECT * FROM tools");
-            while ($m = mysqli_fetch_object($tampil_tools)) :
-              ?>
-              <?php echo $m->icon; ?>
-              <i style="font-size:35px" class="icon-with-tooltip <?php echo $m->icon; ?> colored m-3"
-              data-ps-toggle="tooltip" data-bs-placement="top" title="<?php echo $m->nama ?>"></i>
-              <script>
-              document.addEventListener('DOMContentLoaded', function(){
+              document.addEventListener('DOMContentLoaded', function () {
                 var tooltips = new bootstrap.Tooltip(document.querySelector('.<?php echo $m->icon ?>'));
               })
-              </script>
-              <?php endwhile; ?>
-              </p>
-              </p>
-              </div>
-
-              <div class="section-title mt-4">
-              <h2>LANGUAGE PROFICIENCY</h2>
-              <?php 
-              include "../back-end-sb-admin/startbootstrap-sb-admin-2-gh-pages/connection.php";
-              // profile adalah nama tabel di database
-              $tampil_language = mysqli_query($koneksi, "SELECT * FROM language ORDER BY id_language DESC");
-              while ($l = mysqli_fetch_object($tampil_language)) :
-                ?>
-                <div class="row">
-                <div class="col">
-                <h6 class="skill" style="color:grey"> <?php echo $l->bahasa ?> </h6>
-                </div>
-                <div class="col">
-
-                <img src="backend/fotobende/<?php echo $l->flag ?>" alt="" class="val mb-3" width="40px">
-                </div>
-                </div>
-                
-                <?php endwhile ?>
-                </div>
-
-            <div class="progress">
-              <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>PHP</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>WordPress/CMS</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Photoshop</span> <i class="val">55%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-        </div>
-
+            </script>
+          <?php endwhile; ?>
+        </p>
+        </p>
       </div>
+      <div class="section-title mt-4">
+        <h2> LANGUAGE PROFICIENCY</h2>
+        <?php
+        include "../back-end-sb-admin/startbootstrap-sb-admin-2-gh-pages/connection.php";
 
-    </section><!-- /Skills Section -->
+        $tampil_language = mysqli_query($koneksi, "SELECT*FROM language ORDER BY id_language DESC");
+        while ($l = mysqli_fetch_object($tampil_language)):
+          ?>
+          <div class="row">
+            <div class="col">
+              <h6 class="skill" style="color:grey"><?php echo $l->bahasa; ?> </h6>
+            </div>
+            <div class="col">
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
+              <img src="../back-end-sb-admin/startbootstrap-sb-admin-2-gh-pages/fotobende/<?php echo $l->flag ?>" alt="" class="val mb-3" width="40px">
+            </div>
+          </div><!-- End Skills Item -->
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-      </div><!-- End Section Title -->
+        <?php endwhile ?>
+      </div>
+      <div class="section-title mt-4">
+        <h2>ADDITIONAL SKILLS</h2>
+        <div class="row skills-content">
+          <div class="col-lg" data-aos="fade-up">
+            <!-- membuat tampilan skill mggunakan perulangan WHILE -->
+             <?php
+             include "../back-end-sb-admin/startbootstrap-sb-admin-2-gh-pages/connection.php";
+             // profile adlh nama tabel di database
+             $tampil_skill = mysqli_query($koneksi, "SELECT*FROM skill ORDER BY id_skill DESC");
+             while ($s = mysqli_fetch_object($tampil_skill)):
+             ?>
 
-      <div class="container">
+             <span><?php echo $s->nama_skill ?></span> <br>
+             <?php endwhile; ?>
+             <!-- perulangan end -->
+              <!-- icon start -->
+               <!-- ambil icon yg devicon.dev dan lik nya diletakan di <HEAD> atas -->
 
+           
+
+<div class="row">
+  <div class="col-lg-6">
+
+    <!-- Progress Item: JavaScript -->
+<div class="progress" style="height: 25px; background: #dce8f8; border-radius: 4px; position: relative;">
+  <span class="skill" style="position: absolute; left: 10px; top: 2px; font-weight: 600; color: #111; z-index: 2;">
+    JavaScript <i class="val">75%</i>
+  </span>
+  <div class="progress-bar" role="progressbar" style="width: 75% !important; background-color: #149ddd !important; height: 100% !important; border-radius: 4px;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+
+    </div>
+
+    <div class="col-lg-6">
+
+      <!-- Progress Item: PHP -->
+<div class="progress mb-3" style="height: 25px; background: #dce8f8; border-radius: 4px; position: relative;">
+  <span class="skill" style="position: absolute; left: 10px; top: 2px; font-weight: 600; color: #111; z-index: 2;">
+    PHP <i class="val">80%</i>
+  </span>
+  <div class="progress-bar" role="progressbar" style="width: 80% !important; background-color: #149ddd !important; height: 100% !important; border-radius: 4px;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+
+<!-- Progress Item: WordPress/CMS -->
+<div class="progress mb-3" style="height: 25px; background: #dce8f8; border-radius: 4px; position: relative;">
+  <span class="skill" style="position: absolute; left: 10px; top: 2px; font-weight: 600; color: #111; z-index: 2;">
+    WordPress/CMS <i class="val">90%</i>
+  </span>
+  <div class="progress-bar" role="progressbar" style="width: 90% !important; background-color: #149ddd !important; height: 100% !important; border-radius: 4px;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+
+<!-- Progress Item: Photoshop -->
+<div class="progress mb-3" style="height: 25px; background: #dce8f8; border-radius: 4px; position: relative;">
+  <span class="skill" style="position: absolute; left: 10px; top: 2px; font-weight: 600; color: #111; z-index: 2;">
+    Photoshop <i class="val">55%</i>
+  </span>
+  <div class="progress-bar" role="progressbar" style="width: 55% !important; background-color: #149ddd !important; height: 100% !important; border-radius: 4px;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+  </section><!-- End Skills Section -->
+
+  <!-- Resume Section -->
+  <section id="resume" class="resume section">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg" data-aos="fade-up">
+          <!-- <h3 class="resume-title">Sumary</h3>
+          <div class="resume-item pb-0">
+            <h4>Brandon Johnson</h4>
+            <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and
+                developing user-centered digital/print marketing material from initial concept to final, polished
+                deliverable.</em></p>
+            <ul>
+              <li>Portland par 127,Orlando, FL</li>
+              <li>(123) 456-7891</li>
+              <li>alice.barkley@example.com</li>
+            </ul>
+          </div>-- End Resume Item -->
+        <div class="resume-title">
+    <h2 id="education">Education</h2>
+</div>
+ 
+<?php
+include "../back-end-sb-admin/startbootstrap-sb-admin-2-gh-pages/connection.php";
+$tampil_education = mysqli_query($koneksi, "SELECT * FROM education ORDER BY id_education DESC");
+
+while ($e = mysqli_fetch_object($tampil_education)):
+?>
+    <div class="resume-item">
+        <h4 style="color: grey;"><?php echo $e->nama_jurusan; ?></h4>
         <div class="row">
+            <div class="col-10">
+                <p><em><?php echo $e->tempat_belajar; ?></em></p>
+                <p><?php echo $e->deskripsi; ?></p>
+            </div>
+            <div class="col-2 text-md-right">
+                <h5 style="background: none; color:grey"><?php echo $e->tahun_belajar; ?></h5>
+            </div>
+        </div>
+    </div>
+<?php endwhile; ?>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Sumary</h3>
+<div class="resume-title mt-4">
+    <h2 id="training">Training</h2>
+</div>
 
-            <div class="resume-item pb-0">
-              <h4>Brandon Johnson</h4>
-              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
-              <ul>
-                <li>Portland par 127,Orlando, FL</li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
+<?php
+$tampil_training = mysqli_query($koneksi, "SELECT * FROM training ORDER BY id_training DESC");
 
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Master of Fine Arts &amp; Graphic Design</h4>
-              <h5>2015 - 2016</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
-            </div><!-- Edn Resume Item -->
+while ($e = mysqli_fetch_object($tampil_training)):
+?>
+    <div class="resume-item">
+        <h4 style="color: grey;"><?php echo $e->nama_training; ?></h4>
+        <div class="row">
+            <div class="col-10">
+                <p><em><?php echo $e->tempat_training; ?></em></p>
+                <p><em><?php echo $e->deskripsi; ?></em></p>
+            </div>
+            <div class="col-2 text-md-right">
+                <h5 style="background: none; color:grey"><?php echo $e->tahun_training; ?></h5>
+            </div>
+        </div>
+    </div>
+<?php endwhile; ?>     
 
-            <div class="resume-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-              <h5>2010 - 2014</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
-            </div><!-- Edn Resume Item -->
+          <div class="section-title mt-5" >
+              <h2 id="experience">EXPERIENCE</h2>
+            </div>
+          <?php 
+        include "../back-end-sb-admin/startbootstrap-sb-admin-2-gh-pages/connection.php";
+        $tampil_job = mysqli_query($koneksi, "SELECT * FROM job ORDER BY id_job DESC");
+        while ($j = mysqli_fetch_object($tampil_job)):
+        ?>
 
-          </div>
+          <div class="resume-item">
+                <h4 style="color: grey;"><?php echo $j->nama_pekerjaan; ?></4>
+                <h5 style="color: grey;"><?php echo $j->tahun_bekerja; ?></5>
+                <p><em><?php echo $j->tempat_bekerja ?></em></p>
+                <ul>
+                  <li><?php echo $j->deskripsi ?></li>
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Senior graphic design specialist</h4>
-              <h5>2019 - Present</h5>
-              <p><em>Experion, New York, NY </em></p>
-              <ul>
-                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
+                </ul>
+    </div>
+<?php endwhile; ?>   
 
-            <div class="resume-item">
-              <h4>Graphic design specialist</h4>
-              <h5>2017 - 2018</h5>
-              <p><em>Stepping Stone Advertising, New York, NY</em></p>
-              <ul>
-                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-          </div>
-
+</div>
+        </div>
         </div>
 
-      </div>
+  </section><!-- /Resume Section -->
 
-    </section><!-- /Resume Section -->
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio section-bg">
+  <div class="container">    
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section light-background">
+    <div class="section-title">
+      <h2>PORTFOLIO</h2>
+    </div>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Product</li>
-            <li data-filter=".filter-branding">Branding</li>
-            <li data-filter=".filter-books">Books</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>App 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/app-1.jpg" title="App 1" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
+    <div class="row g-4" data-aos="fade-up">
+      <?php 
+      include "../back-end-sb-admin/startbootstrap-sb-admin-2-gh-pages/connection.php";
+      $tampil_portfolio = mysqli_query($koneksi, "SELECT * FROM portfolio ORDER BY id_portfolio DESC");
+      
+      if (mysqli_num_rows($tampil_portfolio) > 0) :
+        while ($pf = mysqli_fetch_object($tampil_portfolio)):
+      ?>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm border-0">
+              <img src="../back-end-sb-admin/startbootstrap-sb-admin-2-gh-pages/foto/<?php echo $pf->img; ?>" 
+     class="card-img-top" 
+     alt="<?php echo $pf->judul_portfolio; ?>"
+     style="height: 200px; object-fit: cover;">
+              <div class="card-body text-center">
+                <h5 class="card-title fw-bold"><?php echo $pf->judul_portfolio; ?></h5>
+                <?php if (!empty($pf->link)): ?>
+                  <a href="<?php echo $pf->link; ?>" target="_blank" class="btn btn-primary btn-sm mt-2" style="background-color: #149ddd; border: none;">
+                  </a>
+                <?php endif; ?>
               </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Product 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/product-1.jpg" title="Product 1" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Branding 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/branding-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Books 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/books-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>App 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/app-2.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/product-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Product 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/product-2.jpg" title="Product 2" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/branding-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Branding 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/branding-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/books-2.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Books 2</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/books-2.jpg" title="Branding 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>App 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/app-3.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/product-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Product 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/product-3.jpg" title="Product 3" data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/branding-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Branding 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/branding-3.jpg" title="Branding 2" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/books-3.jpg" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Books 3</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a href="assets/img/portfolio/books-3.jpg" title="Branding 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
             </div>
           </div>
-          <!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
-            <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
-            <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Eiusmod Tempor</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-            </div>
-          </div><!-- End Service Item -->
-
+      <?php 
+        endwhile;
+      else :
+      ?>
+        <div class="col-12 text-center text-muted">
+          <p>Belum ada data portfolio yang tersimpan di database.</p>
         </div>
+      <?php endif; ?>
+    </div>
 
+  </div>
+</section><!-- /Portfolio Section -->
+
+  <!-- Services Section -->
+  <!-- <section id="services" class="services section">
+
+    <-- Section Title -->
+    <!--<div class="container section-title" data-aos="fade-up">
+      <h2>Services</h2>
+      <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+        in iste officiis commodi quidem hic quas.</p>
+    </div><-- End Section Title -->
+
+   <!-- <div class="container">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+          <div>
+            <h4 class="title"><a href="service-details.html" class="stretched-link">Lorem Ipsum</a></h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+              occaecati cupiditate non provident</p>
+          </div>
+        </div> -->
+        <!-- End Service Item -->
+
+        <!--<div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+          <div>
+            <h4 class="title"><a href="service-details.html" class="stretched-link">Dolor Sitema</a></h4>
+            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo consequat tarad limino ata</p>
+          </div>
+        </div><-- End Service Item -->
+
+        <!--<div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+          <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+          <div>
+            <h4 class="title"><a href="service-details.html" class="stretched-link">Sed ut perspiciatis</a></h4>
+            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur</p>
+          </div>
+        </div><-- End Service Item -->
+
+        <!-- <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
+          <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
+          <div>
+            <h4 class="title"><a href="service-details.html" class="stretched-link">Magni Dolores</a></h4>
+            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum</p>
+          </div>
+        </div><-- End Service Item -->
+
+       <!-- <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
+          <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
+          <div>
+            <h4 class="title"><a href="service-details.html" class="stretched-link">Nemo Enim</a></h4>
+            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+              praesentium voluptatum deleniti atque</p>
+          </div>
+        </div><-- End Service Item -->
+
+       <!-- <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
+          <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
+          <div>
+            <h4 class="title"><a href="service-details.html" class="stretched-link">Eiusmod Tempor</a></h4>
+            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum
+              soluta nobis est eligendi</p>
+          </div> -->
+        <!-- </div><-- End Service Item 
       </div>
+  </section> -- /Services Section -->
 
-    </section><!-- /Services Section -->
+  <!-- Testimonials Section -->
+  <!-- <section id="testimonials" class="testimonials section light-background"> -->
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section light-background">
+    <!-- Section Title -->
+   <!-- <div class="container section-title" data-aos="fade-up">
+      <h2>Testimonials</h2>
+      <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+    </div><-- End Section Title -->
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+    <!--<div class="container" data-aos="fade-up" data-aos-delay="100">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
+      <div class="swiper init-swiper">
+        <script type="application/json" class="swiper-config">
             {
               "loop": true,
               "speed": 600,
@@ -708,167 +712,173 @@
                 }
               }
             }
-          </script>
-          <div class="swiper-wrapper">
+          </script> -->
+        <!--<div class="swiper-wrapper">
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- /Testimonials Section -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-5">
-
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Call Us</h3>
-                  <p>+1 5589 55488 55</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email Us</h3>
-                  <p>info@example.com</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
+                  Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+              <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+              <h3>Saul Goodman</h3>
+              <h4>Ceo &amp; Founder</h4>
             </div>
-          </div>
+          </div><-- End testimonial item -->
 
-          <div class="col-lg-7">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
+          <!--<div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid malis quorum
+                  velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+              <h3>Sara Wilsson</h3>
+              <h4>Designer</h4>
+            </div>
+          </div><-- End testimonial item -->
 
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Your Name</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
-                </div>
+          <!--<div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis
+                  minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+              <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+              <h3>Jena Karlis</h3>
+              <h4>Store Owner</h4>
+            </div>
+          </div><-- End testimonial item -->
 
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
-                </div>
+         <!-- <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat dolor enim
+                  duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+              <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+              <h3>Matt Brandon</h3>
+              <h4>Freelancer</h4>
+            </div>
+          </div><-- End testimonial item -->
 
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
-                </div>
+         <!-- <div class="swiper-slide">
+            <div class="testimonial-item">
+              <p>
+                <i class="bi bi-quote quote-icon-left"></i>
+                <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam sunt
+                  culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+                <i class="bi bi-quote quote-icon-right"></i>
+              </p>
+              <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+              <h3>John Larson</h3>
+              <h4>Entrepreneur</h4>
+            </div>
+          </div><-- End testimonial item -->
 
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-                </div>
+        <!--</div>
+        <div class="swiper-pagination"></div>
+      </div>
 
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+    </div>
 
-                  <button type="submit">Send Message</button>
-                </div>
+  </section><-- /Testimonials Section -->
 
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Contact</h2>
+      <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-5">
+
+          <div class="info-wrap">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Address</h3>
+                <p>A108 Adam Street, New York, NY 535022</p>
               </div>
-            </form>
-          </div><!-- End Contact Form -->
+            </div><!-- End Info Item -->
 
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>+1 5589 55488 55</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>info@example.com</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
+              frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
+
+        <div class="col-lg-7">
+          <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <div class="row gy-4">
+
+              <div class="col-md-6">
+                <label for="name-field" class="pb-2">Your Name</label>
+                <input type="text" name="name" id="name-field" class="form-control" required="">
+              </div>
+
+              <div class="col-md-6">
+                <label for="email-field" class="pb-2">Your Email</label>
+                <input type="email" class="form-control" name="email" id="email-field" required="">
+              </div>
+
+              <div class="col-md-12">
+                <label for="subject-field" class="pb-2">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject-field" required="">
+              </div>
+
+              <div class="col-md-12">
+                <label for="message-field" class="pb-2">Message</label>
+                <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+              </div>
+
+              <div class="col-md-12 text-center">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                <button type="submit">Send Message</button>
+              </div>
+
+            </div>
+          </form>
+        </div><!-- End Contact Form -->
 
       </div>
 
-    </section><!-- /Contact Section -->
+    </div>
+
+  </section><!-- /Contact Section -->
 
   </main>
 
@@ -876,24 +886,27 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span>
+        </p>
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a
+          href="https://bootstrapmade.com/tools/">DevTools</a>
       </div>
     </div>
 
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
-  <div id="preloader"></div>
+
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
