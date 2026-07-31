@@ -1,4 +1,5 @@
 <?php
+/** @var mysqli $koneksi */
 include "connection.php";
 $id = $_GET['id_mobile'];
 $query = mysqli_query($koneksi, "SELECT * FROM mobile WHERE id_mobile='$id'");

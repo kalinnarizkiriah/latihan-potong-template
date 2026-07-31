@@ -1,3 +1,8 @@
+<?php
+/** @var mysqli $koneksi */
+include "../back-end-sb-admin/startbootstrap-sb-admin-2-gh-pages/connection.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
