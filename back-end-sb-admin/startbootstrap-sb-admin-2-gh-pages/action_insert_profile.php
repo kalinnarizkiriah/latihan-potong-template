@@ -3,6 +3,7 @@
 
 <?php
 // Memanggil koneksi database
+/** @var mysqli $koneksi */
 include "connection.php";
 
 // Mengecek apakah tombol submit ditekan

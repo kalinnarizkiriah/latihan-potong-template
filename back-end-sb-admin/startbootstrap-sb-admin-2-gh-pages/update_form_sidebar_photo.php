@@ -55,7 +55,7 @@ $id_sidebar_photo = mysqli_fetch_object($select_id);
                         <input type="hidden" name="id_sidebar_photo"
                         value="<?php echo $id_sidebar_photo->id_sidebar_photo; ?>">
 
-                       <button type="submit"  class="btn btn-primary">update</button>
+                       <button type="submit"  class="btn btn-primary">Update</button>
                      </form>
                     <!-- content end -->
 

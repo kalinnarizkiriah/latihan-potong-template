@@ -50,7 +50,7 @@ $m = mysqli_fetch_object($select_id);
                             <label for="icon" class="form-label">Icon</label>
                             <input type="text" class="form-control" id="nama" name="icon" value="<?php echo $m->icon ?>">
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Update</button>
                         <button type="reset" name="reset" class="btn btn-primary">Reset</button>
 </form>
                     <!-- content end -->

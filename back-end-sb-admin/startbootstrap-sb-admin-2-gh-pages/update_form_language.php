@@ -47,7 +47,7 @@ $language = mysqli_fetch_object($select_id);
 
                         <input type="hidden" name="id_language" value="<?php echo $language->id_language; ?>">
 
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Update</button>
                         <button type="reset" name="reset" class="btn btn-primary">Reset</button>
                     </form>
                     <!-- content end -->

@@ -1,5 +1,6 @@
 <?php 
 include "connection.php";
+/** @var mysqli $koneksi */
 $select_familiar = mysqli_query($koneksi, "SELECT * FROM familiar ORDER BY id_familiar DESC");
 ?>
 <?php include "header.php" ?>
