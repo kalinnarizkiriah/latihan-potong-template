@@ -175,7 +175,7 @@ $p = mysqli_fetch_object($tampil_profile);
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
                 <h2>Kalinna Rizki Riah</h2>
-                <p>I'm <span class="typed" data-typed-items="Energetic, Ambitious, Adaptable">Designer</span>
+                <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer">Designer</span>
                 <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
                 <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
             </div>
